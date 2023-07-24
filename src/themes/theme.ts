@@ -1,23 +1,32 @@
-import {Colors, Typographies} from "./types";
+import {Colors, DesignTokens, Typographies} from "./types";
 
 export class Theme {
-    get colors(): Colors {
-        return {
-            primary: "#61dafb",
+    designTokens: DesignTokens;
 
-            surface: "#282c34",
-            onSurface: "#ffffff"
-        }
+    constructor(designTokens: DesignTokens) {
+        this.designTokens = designTokens
+    }
+
+    get colors(): Colors {
+        return this.designTokens.color
     }
 
     get typographies(): Typographies {
-        return {
-            bodyText1: {
-                family: "sans-serif",
-                size: "24px"
-            },
-        }
+        return this.designTokens.typography
     }
 }
 
-export default new Theme()
+export default new Theme({
+    color: {
+        primary: "#61dafb",
+        surface: "#282c34",
+        onSurface: "#ffffff"
+    },
+    typography: {
+        bodyText1: {
+            family: "sans-serif",
+            size: "24px"
+        }
+    },
+    spacing: {}
+})

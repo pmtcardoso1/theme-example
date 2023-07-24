@@ -1,14 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import theme from './themes/theme'
-// import useTheme from "./themes/hooks";
+import useStyles from "./useStyles";
 
 function App() {
-  // const {theme} = useTheme();
+  const styles = useStyles()
 
   return (
-    <div className="App" style={{backgroundColor: theme.colors.surface, color: theme.colors.onSurface}}>
+    <div className="App" style={styles.container}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +18,7 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-          style={{color: theme.colors.primary}}
+          style={styles.link}
         >
           Learn React
         </a>
