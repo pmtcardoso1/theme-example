@@ -1,7 +1,7 @@
 import useTheme from "./themes/hooks";
 
 function useStyles() {
-    const {theme} = useTheme()
+    const {theme} = useTheme('app')
     return {
         container: {
             backgroundColor: theme.colors.surface,
