@@ -1,6 +1,7 @@
-import defaultTheme, {Theme} from "./theme";
+import {Theme} from "./theme";
 import React, {useState, ReactElement} from "react";
 import ThemeContext from "./context";
+import makeTheme, {THEMES} from "./themeFactory";
 
 
 type ThemeProviderProps = {
@@ -8,7 +9,7 @@ type ThemeProviderProps = {
 }
 
 export const ThemeProvider = ({children} : ThemeProviderProps) => {
-    const [theme, setTheme] = useState<Theme>(defaultTheme)
+    const [theme, setTheme] = useState<Theme>(makeTheme(THEMES.THEME_A))
 
     return (
         <ThemeContext.Provider value={{theme, setTheme}}>

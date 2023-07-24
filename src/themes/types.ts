@@ -1,3 +1,5 @@
+import {ReactElement} from "react";
+
 type PartialTypographies = {
     bodyText1?: Partial<Typography>
 }
@@ -30,4 +32,9 @@ export type DesignTokens = {
     spacing: any,
     overrides: { [name: string]: PartialDesignTokens }
     // etc...
+}
+
+
+export type ComponentFactory = {
+    [componentName: string]: () => ReactElement
 }
