@@ -1,25 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import theme from './themes/theme'
-// import useTheme from "./themes/hooks";
 
 function App() {
-  // const {theme} = useTheme();
-
   return (
-    <div className="App" style={{backgroundColor: theme.colors.surface, color: theme.colors.onSurface}}>
+    <div className="App bg-sky-900 text-white bg-primary">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className="App-link text-blue-500"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-          style={{color: theme.colors.primary}}
         >
           Learn React
         </a>
