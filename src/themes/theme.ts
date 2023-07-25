@@ -16,17 +16,4 @@ export class Theme {
     }
 }
 
-export default new Theme({
-    color: {
-        primary: "#61dafb",
-        surface: "#282c34",
-        onSurface: "#ffffff"
-    },
-    typography: {
-        bodyText1: {
-            family: "sans-serif",
-            size: "24px"
-        }
-    },
-    spacing: {}
-})
+export default new Theme(require("./tokens.json"))
